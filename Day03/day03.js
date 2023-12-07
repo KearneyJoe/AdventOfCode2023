@@ -135,6 +135,7 @@ function part2(data) {
         objectKey = ''
         num = ''
       } else if (!isNaN(char) && j === data[i].length - 1) {
+        num += char.toString();
         if (objectKey) {
           //check obj values or add to object key
           if (!obj[objectKey]) {
@@ -165,8 +166,7 @@ function part2(data) {
       total += product;
     }
   }
-  console.log(obj)
   return total
 }
 
-console.log("Part 2: ", part2(data)); //Part 2:
+console.log("Part 2: ", part2(data)); //Part 2: 72514855
